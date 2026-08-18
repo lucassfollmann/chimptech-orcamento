@@ -68,10 +68,11 @@ if st.session_state.orcamento and st.session_state.orcamento.lista_servico:
             file_name=f"orcamento_{nome_cliente}.txt",
             mime="text/plain"
         )
+
     st.divider()
     if st.button("Novo orçamento (outro cliente)"):
         st.session_state.orcamento = None
-        st.rerun
+        st.rerun()
 
 
 
