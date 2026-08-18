@@ -1,0 +1,13 @@
+== ORÇAMENTO - ChimpTech ===
+Cliente: Lucas
+
+Serviços:
+- Tela: R$ 350.00
+- Pelicula: R$ 50.00
+- Bateria: R$ 250.00
+- Limpeza: R$ 25.00
+
+Valor original: R$ 675.00
+Desconto: R$  101.25
+Valor Final: R$  573.75
+==================================
