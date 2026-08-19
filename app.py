@@ -1,5 +1,11 @@
 import streamlit as st
 
+st.set_page_config(
+    page_title="ChimpTech - Orçamento",
+    page_icon="🐒",
+    layout="centered"
+)
+
 class Orcamento:
     def __init__(self, nome_cliente):
         self.nome_cliente = nome_cliente
@@ -29,7 +35,33 @@ class Orcamento:
         texto += f"Desconto: R$ {desconto:.2f}\n"
         texto += f"Valor Final: R$ {valor_final:.2f}\n"
         return texto
-                             
+
+st.markdown("""
+    <style>
+        .chimptech-titulo {
+            color: #9333EA !important;}
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0;
+
+    }
+    .stButton > button {
+        background-color: #9333EA;
+        color: white;
+        border: none;
+        font-weight: 600;
+    }
+    .stButton > button:hover {
+        background-color: #7E22CE;
+        color: white;
+    }
+    </style> 
+    <h1 class="chimptech-titulo">🐒 ChimpTech</h1>
+""", unsafe_allow_html=True)
+
+
+st.markdown("<p style='color: gray;'>Gerador de Orçamentos</p>", unsafe_allow_html=True)
+
 if "orcamento" not in st.session_state:
     st.session_state.orcamento = None
 
@@ -73,6 +105,8 @@ if st.session_state.orcamento and st.session_state.orcamento.lista_servico:
     if st.button("Novo orçamento (outro cliente)"):
         st.session_state.orcamento = None
         st.rerun()
+
+    
 
 
 
